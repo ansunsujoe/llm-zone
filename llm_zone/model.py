@@ -19,6 +19,9 @@ class LLM:
             device_map="auto",
         )
 
+    def set_behavior(self, behavior: str) -> None:
+        self.behavior = behavior
+
     def generate(self, prompt: str) -> str:
         # Construct full prompt.
         full_prompt = self._construct_full_prompt(prompt)
